@@ -1,0 +1,34 @@
+<div class="container">
+
+<h1>New restaurant to add?</h1>
+
+<div class="form">
+<%= simple_form_for @restaurant do |f| %>
+
+<div class="form-group">
+  <%= f.input :name, placeholder: "The name is..." %>
+</div>
+
+<div class="form-group">
+  <%= f.input :address, placeholder: "Where is the place?"%>
+</div>
+
+<div class="form-group">
+  <%= f.input :phone_number, placeholder: 'Call to book!'%>
+</div>
+
+<div class="form-group">
+  <% categories = ["chinese", "italian", "japanese", "french", "belgian"] %>
+</div>
+
+<div class="form-group">
+  <%= f.select :category, options_for_select(categories)%>
+</div>
+
+<div class="form-group">
+  <%= f.button :submit, 'Share your favorite', :class => "btn-primary" %>
+</div>
+
+<% end %>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h1>Yuki's favorite restaurants</h1>
+
+  <div class="nav">
+      <%= link_to new_restaurant_path do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
+  </div>
+
+  <div class="row">
+
+    <% @restaurants.each do |restaurant| %>
+
+      <div class="card" style="margin:30px">
+        <p><%= link_to restaurant_path(restaurant) do %>
+          <i class="fas fa-info"></i>
+        <% end %> - <strong><%= restaurant.name %></strong></p>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.phone_number %></p>
+        <p><%= restaurant.category %></p>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

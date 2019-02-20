@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1 style="margin-right: 50px; margin-left: 50px">Here is <%= @restaurant.name %> info</h1>
+    <div class="card" style="margin:30px">
+      <p><strong>Name</strong> -- <%= @restaurant.name %></p>
+      <p><strong>Address</strong> -- <%= @restaurant.address %></p>
+      <p><strong>Call to book</strong> -- <%= @restaurant.phone_number %></p>
+      <p><strong>Category</strong> -- <%= @restaurant.category %></p>
+      <%= link_to restaurants_path do %>
+        <i class="fas fa-clipboard-list"></i>
+      <% end %>
+      <i class="fas fa-registered"></i>
+    </div>
+
+</div>
+
